@@ -1,13 +1,16 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
 import './index.css';
+
+const title = "The Let Them Theory";
+const author = "Mel Robbins";
+const img = "./images/book-1.jpg";
 
 const BookList = () => {
     return <section className="booklist">
-        <Book />
-        <Book />
+        <Book job="developer" />
+        <Book title="random" number={22} />
         <Book />
         <Book />
         <Book />
@@ -15,32 +18,21 @@ const BookList = () => {
     </section>
 }
 
-const Book = () => {
+const Book = (props) => {
+    console.log(props)
     return (
         <article className="book">
-            <Image />
-            <Title />
-            <Author />
+            <img src={img} alt={title} />
+            <h2>{title}</h2>
+            <h4>{author}</h4>
+            <p>{props.job}</p>
+            <p>{props.title}</p>
+            <p>{props.number}</p>
         </article>
     )
 }
 
 // https://www.amazon.com/Best-Sellers-Books/zgbs/books
-
-const Image = () => <img src="./images/book-1.jpg" alt="The Let Them Theory" />;
-
-const Title = () => <h2>The Let Them Theory</h2>;
-
-const Author = () => {
-
-    const inlineHeadingStyles = {
-        color: '#617d98',
-        fontSize: '0.75rem',
-        marginTop: '0.5rem',
-    } 
-
-    return <h4 style={inlineHeadingStyles}>Mel Robbins</h4>;
-}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
