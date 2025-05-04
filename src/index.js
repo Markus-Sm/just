@@ -2,18 +2,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-function Greeting(){
-    return (
-        <>
-            <Person />
-            <Message />
-            <Book />
-        </>
-    )
-}
-
 const BookList = () => {
-    return <section></section>
+    return <section>
+        <Book />
+    </section>
 }
 
 const Book = () => {
@@ -26,12 +18,14 @@ const Book = () => {
     )
 }
 
-const Image = () => <h2>Image placeholder</h2>;
+// https://www.amazon.com/Best-Sellers-Books/zgbs/books
 
-const Title = () => <h2>Book Title</h2>;
+const Image = () => <img src="https://m.media-amazon.com/images/I/91ZVf3kNrcL._SY466_.jpg" alt="The Let Them Theory" />;
 
-const Author = () => <h2>Book Author</h2>;
+const Title = () => <h2>The Let Them Theory</h2>;
+
+const Author = () => <h2>Mel Robbins</h2>;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(<Greeting />);
+root.render(<BookList />);
