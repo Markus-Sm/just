@@ -3,7 +3,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 function Greeting(){
-    return <h3>Hello There</h3>
+    return (
+        <>
+            <Person />
+            <Message />
+        </>
+    )
 }
 
 const Person = () => <h2>Mark Samofał</h2>
