@@ -33,3 +33,9 @@ body{
 .book img {
     width: 100%;
 }
+
+.book h2 {
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+    
