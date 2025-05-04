@@ -2,15 +2,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
+import './index.css';
+
 const BookList = () => {
-    return <section>
+    return <section className="booklist">
+        <Book />
+        <Book />
+        <Book />
+        <Book />
+        <Book />
         <Book />
     </section>
 }
 
 const Book = () => {
     return (
-        <article>
+        <article className="book">
             <Image />
             <Title />
             <Author />
