@@ -7,18 +7,21 @@ function Greeting(){
         <>
             <Person />
             <Message />
+            <Book />
         </>
     )
 }
 
-const Person = () => <h2>Mark Samofał</h2>
-
-const Message = () => <p>Thank you for visiting my website</p>
+const BookList = () => {
+    return <section></section>
+}
 
 const Book = () => {
     return (
         <article>
-            hello
+            <Image />
+            <Title />
+            <Author />
         </article>
     )
 }
