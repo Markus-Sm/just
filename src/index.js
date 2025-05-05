@@ -22,15 +22,16 @@ const books = [
   },
 ]
 
-const names = ["John", "Peter", "Jacob"];
-const newNames = names.map((name) => {
-    console.log(name)
-})
-
 
 const BookList = () => {
     return <section className="booklist">
-        {names}
+        {books.map(() => {
+          return (
+            <div>
+              <h2>item</h2>
+            </div>
+          )
+        })}
     </section>
 }
 
