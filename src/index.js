@@ -9,16 +9,19 @@ const books = [
     author: "Mel Robbins",
     img: "./images/book-1.jpg",
     children: "lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    id: 1
   },
   {
     title: "Sunrise on the Reaping",
     author: "Suzanne Collins",
     img: "./images/book-2.jpg",
+    id: 2
   },
   {
     title: "Mom, I Want to Hear Your Story",
     author: "Jeffrey Mason",
     img: "./images/book-3.jpg",
+    id: 3
   },
 ]
 
@@ -27,9 +30,9 @@ const BookList = () => {
   
     return <section className="booklist">
         {books.map((book) => {
-          const {img, title, author, children} = book;
+          const {img, title, author, children, id} = book;
           return (
-            <Book img={img} title={title} author={author} children={children} key={img} />
+            <Book book={book} key={id} />
           )
         })}
     </section>
