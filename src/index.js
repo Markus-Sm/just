@@ -50,7 +50,7 @@ const EventExamples = () => {
     console.log("form submitted");
   }
   const handleButtonClick = () => {
-    alert("handle button click");
+    alert("handle button click!");
   }
   return (
     <section>
