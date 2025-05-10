@@ -40,7 +40,15 @@ const BookList = () => {
 
 const EventExamples = () => {
   const handleFormInput = (e) => {
-    console.log("handle form input");
+    console.log("console.log e.target", e.target);
+    console.log("console.log e.target.value", e.target.value);
+    console.log("console.log e.target.name", e.target.name);
+  }
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    console.log("console.log e.target.value", e.target.value);
+    console.log("console.log e.target.name", e.target.name);
   }
   const handleButtonClick = () => {
     alert("handle button click");
