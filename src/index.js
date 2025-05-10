@@ -39,7 +39,7 @@ const BookList = () => {
 }
 
 const EventExamples = () => {
-  const handleFormInput = () => {
+  const handleFormInput = (e) => {
     console.log("handle form input");
   }
   const handleButtonClick = () => {
