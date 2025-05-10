@@ -27,38 +27,29 @@ const books = [
 
 
 const BookList = () => {
+  const getBook = (id) => {
+     const book = books.find((book) => book.id === id);
+     console.log(book.id);
+     return book;
+  }
   
-    return <section className="booklist">
-      <EventExamples />
+    return (
+    <section className="booklist">
         {books.map((book) => {
           return (
-            <Book {...book} key={book.id} />
+            <Book {...book} key={book.id} getBook={getBook}/>
           )
         })}
     </section>
+    )
 }
 
-const EventExamples = () => {
-  return (
-    <section>
-      <form>
-        <h2>Typical Form</h2>
-        <input type="text" name="example" id="example" style={{margin: '1rem 0'}}/>
-        <button type="submit">Submit</button>
-        <div>
-          <button type="button" style={{margin: '1rem 0'}}>Submit</button>
-        </div>
-      </form>
-    </section>
-  )
-}
 
 const Book = (props) => {
-  const {img, title, author, children} = props;
+  const {img, title, author, id, children, getBook} = props;
 
-  const displayTitle = () => {
-    console.log(title);
-    return title;
+  const handleGetBook = () => {
+    getBook(id);
   }
 
     return (
@@ -66,7 +57,7 @@ const Book = (props) => {
             <img src={img} alt={title} />
             <h2>{title}</h2>
             <h4>{author}</h4>
-            <button onClick={displayTitle}>Display Title ()</button>
+            <button onClick={handleGetBook}>Display Title</button>
             <p>{children}</p>
         </article>
     )
