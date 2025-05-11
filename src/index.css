@@ -24,6 +24,7 @@ body{
 }
 
 .book{
+    position: relative;
     background-color: #fffffc;
     border-radius: 1rem;
     padding: 2rem;
@@ -50,4 +51,21 @@ body{
     color: #617d98;
     font-size: 0.75rem;
     margin-top: 0.5rem;
+}
+
+.title{
+    text-align: center;
+    
+}
+
+.number{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1rem;
+    padding: 0.75rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background: #c35600;
+    color: #fffffc;
 }
