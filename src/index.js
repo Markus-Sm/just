@@ -5,11 +5,17 @@ import './index.css';
 import { books } from './books';
 import Book from './Book';
 
+const Title = () => {
+  return (
+    <h1 className="title">Best sellers in books</h1>
+  )
+}
+
 const BookList = () => {
   
     return (
     <>
-    <h1 className="title">Best sellers in books</h1>
+    <Title/>
     <section className="booklist">
         {books.map((book, index) => {
           return (
